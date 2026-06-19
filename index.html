@@ -266,6 +266,19 @@
   </div>
 </section>
 
+<section class="scene" id="buyback" data-actzone="a2">
+  <div class="kicker reveal" data-zh="今天就能用 · 二级流动性" data-en="Available today · secondary liquidity">今天就能用 · 二级流动性</div>
+  <h2 class="reveal"
+      data-zh="想提前走?LP 一直挂着回购价。<br>因为在内在价值之下买,它稳赚——所以它从不撤单。"
+      data-en="Want out early? The LP always has a bid up.<br>Because buying below intrinsic is its profit — so it never pulls the quote.">想提前走?LP 一直挂着回购价。<br>因为在内在价值之下买,它稳赚——所以它从不撤单。</h2>
+  <p class="lead reveal"
+     data-zh="你不必持有到到期。任何时刻,LP 都对你这张未到期的仓位挂着一个回购价——把它当下的<b>内在价值</b>(若现在按预言机价结算,P 腿能拿到的那部分)扣掉一个固定 haircut。为什么这个价你信得过、而 LP 又愿意一直挂?因为内在价值永远 ≤ 期权的公允价,所以在内在价值之下买入、再在 CEX 上对冲的 LP <b>结构性稳赚那段价差</b>——回购不是它给你的恩惠,是它自己的生意。这个数<b>无需信任任何端点</b>:公式是公开的,你自己就能复算它该出多少。而如果哪天 LP 不挂单、或出价太低?你<b>原封不动持有到到期</b>,单边离线地板照付——<b>LP 能拒绝给你流动性,但永远拿不走你的仓位</b>。说清楚边界:这是「卖回给 LP + LP 全新铸一张给下一个买家」,不是把仓位<b>点对点转让</b>给陌生人——后者要等契约时代;在没有契约的今天,我们用一个保证亏不了的做市商,换来一个真实的提前退出。"
+     data-en="You don't have to hold to maturity. At any moment the LP keeps a bid up on your un-matured position — its current <b>intrinsic value</b> (what the P leg would take if it settled at the oracle price right now) less a fixed haircut. Why trust that number, and why does the LP keep quoting it? Because intrinsic value is always ≤ the option's fair mark, so an LP that buys below intrinsic and hedges on a CEX <b>structurally pockets the spread</b> — the buyback isn't a favour it does you, it's its own business. And the number <b>needs no trusted endpoint</b>: the formula is public, you recompute the bid yourself. If the LP ever stops quoting, or lowballs you? You <b>simply hold to maturity</b> and the unilateral offline floor still pays — <b>the LP can refuse you liquidity, but can never seize your position</b>. The boundary, stated plainly: this is &ldquo;sell back to the LP, who mints a fresh one for the next buyer&rdquo;, not a <b>peer-to-peer transfer</b> of the position to a stranger — that waits for covenants. Before covenants, we buy a real early exit with a market-maker that cannot lose.">你不必持有到到期。任何时刻,LP 都对你这张未到期的仓位挂着一个回购价——把它当下的<b>内在价值</b>(若现在按预言机价结算,P 腿能拿到的那部分)扣掉一个固定 haircut。为什么这个价你信得过、而 LP 又愿意一直挂?因为内在价值永远 ≤ 期权的公允价,所以在内在价值之下买入、再在 CEX 上对冲的 LP <b>结构性稳赚那段价差</b>——回购不是它给你的恩惠,是它自己的生意。这个数<b>无需信任任何端点</b>:公式是公开的,你自己就能复算它该出多少。而如果哪天 LP 不挂单、或出价太低?你<b>原封不动持有到到期</b>,单边离线地板照付——<b>LP 能拒绝给你流动性,但永远拿不走你的仓位</b>。说清楚边界:这是「卖回给 LP + LP 全新铸一张给下一个买家」,不是把仓位<b>点对点转让</b>给陌生人——后者要等契约时代;在没有契约的今天,我们用一个保证亏不了的做市商,换来一个真实的提前退出。</p>
+  <div class="caption reveal"
+       data-zh="不是承诺,是机制:出价 = 内在价值 − haircut,LP 自己就能复算、你也能。真实 2-of-2 Q 的合作平仓已被活节点接受并确认(53df734 · regtest)。报价端点:satusd-lp POST /v0/buyback_quote。"
+       data-en="Not a promise, a mechanism: bid = intrinsic − haircut, recomputable by the LP and by you alike. The cooperative close of a real 2-of-2 Q is accepted &amp; confirmed by a live node (53df734 · regtest). Quote endpoint: satusd-lp POST /v0/buyback_quote.">不是承诺,是机制:出价 = 内在价值 − haircut,LP 自己就能复算、你也能。真实 2-of-2 Q 的合作平仓已被活节点接受并确认(53df734 · regtest)。报价端点:satusd-lp POST /v0/buyback_quote。</div>
+</section>
+
 <!-- ════ ACT III ════ -->
 <div class="actdiv" data-actzone="a3">
   <div class="n">ACT Ⅲ</div>
